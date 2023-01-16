@@ -1,0 +1,1 @@
+Get-ChildItem –Path "C:\RedRock\Resources" -Recurse | Where-Object {($.LastWriteTime -lt (Get-Date).AddDays(-180)) -and ($.Name -like 'samms_log.log.20*')} | Remove-Item
